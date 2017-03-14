@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170314172732) do
+ActiveRecord::Schema.define(version: 20170314191206) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20170314172732) do
     t.datetime "updated_at", null: false
     t.string   "poster"
     t.string   "artist"
-    t.datetime "date"
+    t.date     "date"
     t.index ["artist"], name: "index_prints_on_artist", using: :btree
     t.index ["date"], name: "index_prints_on_date", using: :btree
     t.index ["location"], name: "index_prints_on_location", using: :btree

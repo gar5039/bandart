@@ -1,5 +1,5 @@
 <br />
-<div class="container-fluid">
+<div class="container">
  
   <div class="card-columns">
 
@@ -8,15 +8,17 @@
     <div class="card-responsive hovereffect">
       <%= image_tag print.poster, class: 'img-fluid' %>
       <div class="overlay">
-        <%= link_to 'Print Details', print_path(print) %>
         <div class="card-block">
+          <%= link_to 'Print Details', print_path(print), class: 'btn btn-secondary' %>
           <p class="card-title">Venue: <%= print.venue %></p>
           <p class="text">Location: <%= print.location %></p>
           <p class="text">Date: <%= print.date %></p>
           <p class="text">Artist: <%= print.artist %></p>
         </div>
       </div>
+      <br />
     </div>
+    
 
     <% end %>
   </div>

@@ -1,135 +1,23 @@
-<div class="container">
- <!-- First row -->
-  <div class="row">
-    <div class="col-xs-12 col-md-4">
-      <!-- Card -->
-      <div class="card">
-        <div class="hovereffect">
-          <img class="card-img img-fluid" src="https://2ab9pu2w8o9xpg6w26xnz04d-wpengine.netdna-ssl.com/wp-content/uploads/2016/06/phphilly-poster-980x1307.jpg" alt="Mann 2016" />
-          <div class="overlay">
-            <a class="info" href="#">
-              <h2>Learn More</h2>
-            </a>
-          <div class="card-block">
-            <h4 class="card-title">Mann Center Philadelphia, PA</h4>
-            <p class="text">6/28-29/2016</p>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div><!-- .end Card -->
+<br />
+<div class="container-fluid">
+ 
+  <div class="card-columns">
 
-    <div class="col-xs-12 col-md-4">
-      <!-- Card -->
-      <div class="card">
-        <div class="hovereffect">
-          <img class="card-img img-fluid" src="https://s-media-cache-ak0.pinimg.com/originals/0a/29/cd/0a29cde656f42bae8f63e230f1e8a89d.jpg" alt="Mann 2015" />
-          <div class="overlay">
-            <a class="info" href="#">
-              <h2>Learn More</h2>
-            </a>
-          <div class="card-block">
-            <h4 class="card-title">Mann Center Philadelphia, PA</h4>
-            <p class="text">8/11-12/2015</p>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div><!-- .end Card -->
+    <% @prints.each do |print| %>
 
-    <div class="col-xs-12 col-md-4">
-      <!-- Card -->
-      <div class="card">
-        <div class="hovereffect">
-          <img class="card-img img-fluid" src="http://www.wallsofyourcave.com/wp-content/uploads/2014/07/phish-philadelphia-poster.jpg" alt="Mann 2014">
-          <div class="overlay">
-            <a class="info" href="#">
-              <h2>Learn More</h2>
-            </a>
-          <div class="card-block">
-            <h4 class="card-title">Mann Center Philadelphia, PA</h4>
-            <p class="text">7/8-9/2014</p>
-          </div>
-          </div>
-        </div>
-      </div><!-- .end Card -->
-    </div>
-  <!-- .end First row -->
-
- <!-- Second row -->
-
-  <div class="col-xs-12 col-md-4">
-    <!-- Card -->
-    <div class="card">
-      <div class="hovereffect">
-        <img class="card-img img-fluid" src="http://payload434.cargocollective.com/1/3/110399/10991344/Phish_Mexico_FinalScan_800px_800.jpg" alt="Mexico 2016">
-        <div class="overlay">
-          <a class="info" href="#">
-            <h2>Learn More</h2>
-          </a>
+    <div class="card-responsive hovereffect">
+      <%= image_tag print.poster, class: 'img-fluid' %>
+      <div class="overlay">
+        <%= link_to 'Print Details', print_path(print) %>
         <div class="card-block">
-          <h4 class="card-title">Riviera Maya, Mexico</h4>
-          <p class="text">1/15-17/2016</p>
+          <p class="card-title">Venue: <%= print.venue %></p>
+          <p class="text">Location: <%= print.location %></p>
+          <p class="text">Date: <%= print.date %></p>
+          <p class="text">Artist: <%= print.artist %></p>
         </div>
-        </div>
-      </div>
-    </div><!-- .end Card -->
-  </div>
-
-  <div class="col-xs-12 col-md-4">
-   <!-- Card -->
-    <div class="card">
-      <div class="hovereffect">
-        <img class="card-img img-fluid" src="http://2.bp.blogspot.com/-Cu7Uk7JJGE0/VFQeLEsRt3I/AAAAAAAAOO0/UqFFSTdoDYg/s1600/PhishHalloweenPosterVegas.jpg" alt="Vegas 2016" />
-        <div class="overlay">
-          <a class="info" href="#">
-            <h2>Learn More</h2>
-          </a>
-        <div class="card-block">
-          <h4 class="card-title">MGM Grand Arena Las Vegas, NV</h4>
-          <p class="text">10/28-31/2016</p>
-        </div>
-        </div>
-      </div><!-- .end Card -->
-    </div>
-  </div>
-
-  <div class="col-xs-12 col-md-4">
-    <!-- Card -->
-    <div class="card">
-      <div class="hovereffect">
-        <img class="card-img img-fluid" src="https://2ab9pu2w8o9xpg6w26xnz04d-wpengine.netdna-ssl.com/wp-content/uploads/2016/06/phchicagoposter1.jpg" alt="Wrigley 2016" />
-        <div class="overlay">
-          <a class="info" href="#">
-            <h2>Learn More</h2>
-          </a>
-        <div class="card-block">
-          <h4 class="card-title">Wrigley Field Chicago, IL</h4>
-          <p class="text">6/24-25/2016</p>
-        </div>
-        </div><!-- .end Card -->
       </div>
     </div>
-  </div>
 
- <!-- Third row -->
-
-
-  <div class="col-xs-12 col-md-4">
-  <!-- Card -->
-    <div class="card">
-      <div class="hovereffect">
-        <img class=" card-img img-fluid" src="http://payload469.cargocollective.com/1/3/110399/11687960/2016_Phish_Chicago_FinalScan_800px_800.jpg" alt="Wrigley 2016" />
-        <div class="overlay">
-          <a class="info" href="#">
-            <h2>Learn More</h2>
-          </a>
-        <div class="card-block">
-            <h4 class="card-title">Wrigley Field Chicago, IL</h4>
-            <p class="text">6/24-25/2016</p>
-        </div>
-        </div>
-      </div>
-    </div>  
+    <% end %>
   </div>
 </div>

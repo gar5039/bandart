@@ -1,0 +1,27 @@
+<table class="table">
+
+<% @prints.each do |print| %>
+  <tr>
+    <td>
+      <%= image_tag print.poster, class: 'img-thumbnail' %>
+    </td>
+    <td>
+      <%= print.venue %>
+    </td>
+    <td>
+      <%= print.location %>
+    </td>
+    <td>
+      <%= print.date %>
+    </td>
+    <td>
+      <%= print.artist %>
+    </td>
+  </tr>
+
+<% end %>
+</table>
+
+<pre>
+  <!-- <%= @prints.to_yaml %> -->
+</pre>

@@ -1,0 +1,17 @@
+<div class="container">
+<br />
+  <div class="row">
+    <div class="col-fluid">
+      <%= image_tag @print.poster, class: 'img-fluid' %>
+    </div>
+    <div class="col"><br /><br />
+      <p>Location: <br /> <%= @print.location %></p>
+      <p>Venue: <br /><%= @print.venue %></p>
+      <p>Date: <br /> <%= @print.date %></p>
+      <p>Artist: <br /> <%= @print.artist %></p>
+      <div class="float-right">
+        <%= link_to 'Edit', edit_adminprint_path(@print), class: 'btn btn-secondary' %>
+        <%= link_to 'Destroy', adminprint_path(@print), method: :delete, data: {confirm: 'Are you sure you want to delete this?'},class: 'btn btn-danger' %>
+      </div>
+    </div>
+  </div>

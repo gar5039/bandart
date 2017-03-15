@@ -17,6 +17,9 @@
     <td>
       <%= print.artist %>
     </td>
+    <td>
+      <h1><%= link_to print.poster, adminprint_path(print), class: "btn btn-secondary" %></h1><br />
+    </td>
   </tr>
 
 <% end %>

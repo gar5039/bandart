@@ -5,21 +5,33 @@ body {
 }
 
 .navbar {
-  height: 50px;
-  margin-top: 0px;
-  padding-top: 0px;
+  height: 60px;
 }
 
-.navbar-brand {
-  color: #125688;
-  font-size: 30px;
-  font-family: 'Pacifico', cursive;
-}
+
 
 .navbar-form {
   width: 400px;
 }
 
+.comments {
+  padding: 30px;
+}
+
+.comments .text-muted{
+  font-size: 10px;
+  padding-left: 30px;
+}
+
+.comments-list {
+  border: 1px solid #CACBCC;
+  border-radius: 10px;
+  background-color: #E0E0E0;
+}
+
+.comments-list p1 {
+  text-color: #737373;
+}
 
 #container {
     width: 100%;

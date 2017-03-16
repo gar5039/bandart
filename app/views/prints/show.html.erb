@@ -5,56 +5,37 @@
       <%= image_tag @print.poster, class: 'img-fluid' %>
     </div>
     <div class="col"><br /><br />
-      <p>Location: <br /> <%= @print.location %></p>
-      <p>Venue: <br /><%= @print.venue %></p>
-      <p>Date: <br /> <%= @print.date %></p>
-      <p>Artist: <br /> <%= @print.artist %></p>
+      <small>Location: <br /></small>
+        <p><%= @print.location %></p>
+      <small>Venue: <br /></small>
+        <p><%= @print.venue %></p>
+      <small>Date: <br /></small>
+        <p><%= @print.date %></p>
+      <small>Artist: <br /></small>
+        <p><%= @print.artist %></p>
     </div>
   </div>
+</div>
 <br /><br /><br />
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Add a comment</h4>
-      </div>
-      <%= simple_form_for @comment, url: print_comments_path(@print) do |f| %>
-        <div class="modal-body">
-          <%= f.input :message %>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <%= f.submit "Add a Comment", class: 'btn btn-secondary' %>
-        </div>
-      <% end %>
-    </div>
-  </div>
-</div>
-
-<div class="col-xs-8 col-xs-offset-1">
-<h1 class="pull-left">Comments</h1>
-<!-- Button trigger modal -->
-<button class="btn btn-secondary btn-sm pull-right" data-toggle="modal" data-target="#myModal">Add a comment</button>
-</div>
 
 <br />
 
 <div class="comments">
+  <h3>Comments</h3>
+
+  <%= simple_form_for @comment, url: print_comments_path(@print) do |f| %>
+    <%= f.input :message, placeholder: 'Add a comment...' %>
+    <%= f.submit "Add a Comment", class: 'btn btn-secondary' %>
+  <% end %>
+  <br />
 
   <% @print.comments.each do |comment| %>
-    <div>
-      <blockquote>
-        <b><%= comment.rating %></b> -
-          <%= comment.message %>
-        <small><%= comment.user.email %></small>
-      </blockquote>
+    <div class="comments-list col-6">
+      <p1><%= comment.message %></p1>
+      <br />
+      <p1 class="text-muted"><%= comment.user.email %></p1>
+      <br />
     </div>
+    <br />
   <% end %>
-</div>
-
-
-</div>
 </div>

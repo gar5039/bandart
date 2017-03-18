@@ -10,10 +10,11 @@
       <div class="overlay">
         <div class="card-block">
           <%= link_to 'Print Details', print_path(print), class: 'btn btn-secondary' %>
+          <br /><br />
           <p class="card-title">Venue: <%= print.venue %></p>
           <p class="text">Location: <%= print.location %></p>
-          <p class="text">Date: <%= print.date %></p>
           <p class="text">Artist: <%= print.artist %></p>
+          <p class="text">Date: <%= print.date %></p>
         </div>
       </div>
       <br />

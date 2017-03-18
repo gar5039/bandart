@@ -1,14 +1,8 @@
 @import "bootstrap";
 
-body {
-  background-color: grey;
-}
-
 .navbar {
   height: 60px;
 }
-
-
 
 .navbar-form {
   width: 400px;
@@ -26,7 +20,7 @@ body {
 .comments-list {
   border: 1px solid #CACBCC;
   border-radius: 10px;
-  background-color: #E0E0E0;
+  background-color: #CCCCCC;
 }
 
 .comments-list p1 {
